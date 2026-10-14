@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Work Pages</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="/spidy.ico">
+        
+        <style>
+            body{
+                background-color:rgb(237, 240, 241);
+            }
+            .header{
+                display:flex;
+                justify-content: space-between;
+                text-decoration:none;
+                align-items: center;
+                padding:15px 20px;
+            }
+
+            h1{
+                color:black;
+                margin:auto;
+                text-align: center;
+            }
+
+            nav{
+                display:flex;
+                float:left;
+                text-decoration:none;
+                gap: 20px; 
+            }
+
+            table,th,td {
+                border:2px solid black;
+                width:30%;
+            }
+
+            </style>
+    </head>
+        <body>
+        <header class="header">
+            <h1>My Work 7 Novermber 2026</h1>
+        <nav>
+            <a href="../index.html">Home</a> 
+        </nav>
+        </header>
+
+
+        <a href="#menu">Go to Menu</a><br><br>
+        <a href="mailto:mrmaulik1112@gmail.com">Send Email</a><br><br>
+        <a href=":tel:+918238169003">Call Me</a><br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <table>
+        <tr><td>Item</td><td>Price</td></tr>
+        <tr><td colspan="3">Total</td></tr>
+        </table>
+        <ul>
+        <li>Starters</li>
+        <ul><li>Soup</li></ul>
+        <p>Mains</p>
+        </ul>
+        <p> In upper list their is use li tags inside ul so ist bad practiece</p>
+        <br><br>
+        
+        <!-- <img src="../Apple.jpg" alt="My Image" width="300" height="200"><br><br>
+        <img src="../apple.jpg" alt="My Image" width="300" height="200"><br><br>
+        <img src="../APPLE.JPG" alt="My Image" width="300" height="200"><br><br>
+        <img src="../Apple.jpeg" alt="My Image" width="300" height="200"><br><br> -->
+        <p id="menu">Menu</p>
+        <p>This is menu content.<br><br></p>
+
+        <p> Hello, World! "in this before add &lt;br&gt; single , so its not do any chnage , when make its doubel so one line gap incarse means singel not works!"</p>
+
+        <iframe  width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
+        <p> Make sure when use youtuev vude not include controls , else video not play if remove contros so add &controls=1</p>
+
+        <!-- Drag and Drop api-->
+        <h2>Drag and Drop Example</h2>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;"></div>
+        <img src="../Apple.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+
+        <button popovertarget="tip1" popovertargetaction="show">Click me</button>
+        <button popovertarget="tip1" popovertargetaction="hide">Hide</button>
+
+        <p id="tip1" popover>Popover content</p>
+
+        <br><br>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="clickCounter()">click</button>
+        
+        <br><br>
+
+        <p>Web Worker Example</p>
+        
+        <p>Count Numbers: <output id="increse"></output></p>
+        <button onclick="startWorker()">Start Worker</button>
+        <button onclick="stopWorker()">Stop Worker</button>
+
+        <script>
+
+            const x= document.getElementById("result");
+            // if(typeof(Storage)!=="undefined"){
+            //     x.innerHTML="localStorage is supported";
+            //     localStorage.setItem("name","Maulik Solanki");
+            //     localStorage.setItem("age","20");
+            //     x.innerHTML+="<br> Name: "+localStorage.getItem("name")+"<br> Age: "+localStorage.getItem("age");
+            // }else{
+            //     x.innerHTML="localStorage is not supported";
+            // }
+            function clickCounter(){
+                
+                if(localStorage.clickcount){
+                    localStorage.clickcount=Number(localStorage.clickcount)+1;
+                }else{
+                    localStorage.clickcount=1;
+                }
+                x.innerHTML="You have visited this page "+localStorage.clickcount+" times";
+            }
+        
+
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+
+
+            var w;
+             
+        function startWorker(){
+            const increse= document.getElementById("increse");
+            if(typeof(worker)!=="undefined"){
+                w=new Worker("7nov26.js");
+            }
+            w.onmessage=function(event){
+                increse.innerHTML=event.data;
+            };
+
+        }
+    
+
+
+
+
+
+
+        </script>
+
+
+        </body>
+ </html>
