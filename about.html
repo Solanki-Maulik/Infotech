@@ -4,19 +4,24 @@
         <title>Maulik Solanki | HTML CSS Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="about.css">
         <link rel="icon" href="logo.png" type="image/x-icon">
     </head>
 <body>
-    <div class="navbar">
+   <div class="navigation">
+        <div class="nav-left">
         <img src="logo.png" alt="Logo" class="logo" draggable="false">
         <h1>Maulik Solanki</h1>
-        
+        </div>
+
+        <div class="nav-center">
         <ul>    
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul> 
+        </div>
 
+        <div class="nav-right">
         <a class="nav-btn-link" href="mailto:mrmauli1112@gmail.com">
             <button class="nav-btn1"><img src="resources/envelop1.png" class="btn1_logo" draggable="false"><p>Say Hello</p></button>
         </a>
@@ -24,33 +29,72 @@
         <a class="nav-btn-link" href="https://www.linkedin.com/in/maulik-solanki-bca/">
             <button class="nav-btn2"><img src="resources/linkdin_logo2.png" class="btn2_logo" draggable="false"></button>
         </a>
-        
-        
-   </div>
+        </div>  
+    </div>
 
     <div class="page-content-intro">
-        <h2>Hi,I'm Maulik,<br>
-            This is About Page 
-        </h2>
+        
+        
         <p>Works:</p>
+        <div class="form" class="form">
+        <form action="submit.html" method="GET">
+            
+            <h4>Registration Form</h4>
+            
+            <label for="fname" >Firstname: </label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="username" >Lastname: </label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="dob" >Date of Birth: </label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            <label for="gender">Gender:</label> Male 
+            <input type="radio" id="male-btn" name="radio"> Female
+            <input type="radio" id="female-btn" name="radio"><br><br>
+            <label for="phone" >Phone Number: </label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" maxlength="10" inputmode="tel" required><br><br>
+            <label for="email" >Email: </label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="resume">Resume:</label>
+            <input type="file" id="resume" accept="application/pdf" required><br><br>
+            <div id="error"></div>
+            <label for="giturl">Github:</label>
+            <input type="url" id="giturl" name="giturl" required><br><br>
+            <label for="linkeurl">Linkedin:</label>
+            <input type="url" id="linkeurl" name="linkeurl" required><br><br>
+            <label for="Roles">Role:</label>
+            <select>
+                
+                <option value="webdev">Website Developer</option>
+                <option value="mbdev">Mobile Developer</option>
+                <option value="softdev">Software Developer</option>
+                <option value="netdev">.Net Developer</option>
+            </select><br><br>
+
+            <input type="submit" id="sub-btn" value="Submit">
+            <input type="reset" id="rt-btn" value="Reset">
+
+
+
+
+        </form>
        
         
         </div>
     </div>
 
-    <footer class="footer">
+   <footer class="footer">
 
         <h3>
-            Let's Get,<br>Connect <br>via social
+            Let's Get,<br>Connected <br>via social
         </h3>
 
         <ul>
-            <p>Navigation</p>
+            <li class="list-title">Navigation</li>
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
         <ul>
-            <p>Links</p>
+            <li class="list-title">Links</li>
             <li><a href="https://www.linkedin.com/in/maulik-solanki-bca/" target="_blank">Linkedin</a></li>
             <li><a href="https://www.github.com/Solanki-Maulik" target="_blank">Github</a></li>
             
@@ -58,6 +102,17 @@
 
      
     </div>
+
+    <script>
+        const file= document.getElementById('resume');
+
+       if(file){
+            if(file.type[0] !== "application/pdf"){
+                // document.getElementById('error').innerText="Only Upload pdf"
+
+            }
+       }
+    </script>
 
         
 
