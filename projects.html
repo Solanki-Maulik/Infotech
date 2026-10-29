@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="index.css">
         <link rel="icon" href="logo.png" type="image/x-icon">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
 <body>
     <div class="navbar">
@@ -33,7 +34,7 @@
             This is Project Page 
         </h2>
         <p>Works:</p>
-       
+       <div id="plots" style="width:100%;max-width:500px;"></div>
         
         </div>
     </div>
@@ -58,6 +59,23 @@
 
      
     </div>
+    <script>
+        const xA= ["India","Australia","West Indies","Others"];
+        const yA= [2,5,2,3];
+
+        const data=[{
+            x:xA,
+            y:yA,
+            type:"bar",
+            orientation:"v",
+            marker: {color:"yellow"}
+
+
+        }];
+        const layout={title:" ODI World Cup Winning Teams"}
+
+        Plotly.newPlot("plots",data);
+    </script>
 
         
 

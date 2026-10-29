@@ -4,7 +4,7 @@
         <title>Work Pages</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="/spidy.ico">
+        
         
         <style>
             body{
@@ -53,15 +53,7 @@
         <br><br>
         <br><br>
         <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
+       
         <table>
         <tr><td>Item</td><td>Price</td></tr>
         <tr><td colspan="3">Total</td></tr>
@@ -74,19 +66,16 @@
         <p> In upper list their is use li tags inside ul so ist bad practiece</p>
         <br><br>
         
-        <!-- <img src="../Apple.jpg" alt="My Image" width="300" height="200"><br><br>
-        <img src="../apple.jpg" alt="My Image" width="300" height="200"><br><br>
-        <img src="../APPLE.JPG" alt="My Image" width="300" height="200"><br><br>
-        <img src="../Apple.jpeg" alt="My Image" width="300" height="200"><br><br> -->
+   
         <p id="menu">Menu</p>
         <p>This is menu content.<br><br></p>
 
         <p> Hello, World! "in this before add &lt;br&gt; single , so its not do any chnage , when make its doubel so one line gap incarse means singel not works!"</p>
 
-        <iframe  width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
-        <p> Make sure when use youtuev vude not include controls , else video not play if remove contros so add &controls=1</p>
+        <iframe  width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?&autoplay=1"></iframe>
+        <p> Make sure when use youtube video not include controls , else video not play if remove contros so add &mute=1</p>
 
-        <!-- Drag and Drop api-->
+        
         <h2>Drag and Drop Example</h2>
         <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;"></div>
         <img src="../Apple.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
@@ -103,11 +92,7 @@
         
         <br><br>
 
-        <p>Web Worker Example</p>
         
-        <p>Count Numbers: <output id="increse"></output></p>
-        <button onclick="startWorker()">Start Worker</button>
-        <button onclick="stopWorker()">Stop Worker</button>
 
         <script>
 
@@ -146,19 +131,7 @@
             }
 
 
-            var w;
-             
-        function startWorker(){
-            const increse= document.getElementById("increse");
-            if(typeof(worker)!=="undefined"){
-                w=new Worker("7nov26.js");
-            }
-            w.onmessage=function(event){
-                increse.innerHTML=event.data;
-            };
-
-        }
-    
+      
 
 
 

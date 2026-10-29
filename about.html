@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="about.css">
         <link rel="icon" href="logo.png" type="image/x-icon">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
 <body>
    <div class="navigation">
@@ -73,6 +74,7 @@
             <input type="submit" id="sub-btn" value="Submit">
             <input type="reset" id="rt-btn" value="Reset">
 
+            <div id="plots" style="width:100%;max-width:500px;"></div>
 
 
 
@@ -107,12 +109,29 @@
         const file= document.getElementById('resume');
 
        if(file){
-            if(file.type[0] !== "application/pdf"){
+            if(file.type !== "application/pdf"){
                 // document.getElementById('error').innerText="Only Upload pdf"
 
             }
        }
-    </script>
+
+    //    const xA = ["Kapil Dev","Yuvraj","MS Dhoni", "Virat", "Rohit","Gill"];
+    //    const yA = [1,3,4,5,4,2];
+
+    //    const data=[{
+    //     x:xA,
+    //     y:yA,
+    //     type:"bar",
+    //     orientation:"v",
+    //     marker:{color:"red"}
+
+
+    //    }];
+
+    //    const layout = {title:"India Odi Wolrd Cup Winners"}
+
+    //    Plotly.newPlot("plots",data);
+    // </script>
 
         
 
